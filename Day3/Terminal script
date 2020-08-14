@@ -1,0 +1,124 @@
+###task 2 crearing my first package 
+
+###creating worspace###
+israa@israa-VirtualBox:~$ mkdir -p ~/catkin_ws/src
+israa@israa-VirtualBox:~$ cd catkin_ws/src
+israa@israa-VirtualBox:~/catkin_ws/src$ catkin_init_workspace
+Creating symlink "/home/israa/catkin_ws/src/CMakeLists.txt" pointing to "/opt/ros/melodic/share/catkin/cmake/toplevel.cmake"
+israa@israa-VirtualBox:~/catkin_ws/src$ cd ~/catkin_ws/
+israa@israa-VirtualBox:~/catkin_ws$ catkin_make
+Base path: /home/israa/catkin_ws
+Source space: /home/israa/catkin_ws/src
+Build space: /home/israa/catkin_ws/build
+Devel space: /home/israa/catkin_ws/devel
+Install space: /home/israa/catkin_ws/install
+####
+#### Running command: "cmake /home/israa/catkin_ws/src -DCATKIN_DEVEL_PREFIX=/home/israa/catkin_ws/devel -DCMAKE_INSTALL_PREFIX=/home/israa/catkin_ws/install -G Unix Makefiles" in "/home/israa/catkin_ws/build"
+####
+-- The C compiler identification is GNU 7.5.0
+-- The CXX compiler identification is GNU 7.5.0
+-- Check for working C compiler: /usr/bin/cc
+-- Check for working C compiler: /usr/bin/cc -- works
+-- Detecting C compiler ABI info
+-- Detecting C compiler ABI info - done
+-- Detecting C compile features
+-- Detecting C compile features - done
+-- Check for working CXX compiler: /usr/bin/c++
+-- Check for working CXX compiler: /usr/bin/c++ -- works
+-- Detecting CXX compiler ABI info
+-- Detecting CXX compiler ABI info - done
+-- Detecting CXX compile features
+-- Detecting CXX compile features - done
+-- Using CATKIN_DEVEL_PREFIX: /home/israa/catkin_ws/devel
+-- Using CMAKE_PREFIX_PATH: /opt/ros/melodic
+-- This workspace overlays: /opt/ros/melodic
+-- Found PythonInterp: /usr/bin/python2 (found suitable version "2.7.17", minimum required is "2") 
+-- Using PYTHON_EXECUTABLE: /usr/bin/python2
+-- Using Debian Python package layout
+-- Using empy: /usr/bin/empy
+-- Using CATKIN_ENABLE_TESTING: ON
+-- Call enable_testing()
+-- Using CATKIN_TEST_RESULTS_DIR: /home/israa/catkin_ws/build/test_results
+-- Found gtest sources under '/usr/src/googletest': gtests will be built
+-- Found gmock sources under '/usr/src/googletest': gmock will be built
+-- Found PythonInterp: /usr/bin/python2 (found version "2.7.17") 
+-- Looking for pthread.h
+-- Looking for pthread.h - found
+-- Looking for pthread_create
+-- Looking for pthread_create - not found
+-- Looking for pthread_create in pthreads
+-- Looking for pthread_create in pthreads - not found
+-- Looking for pthread_create in pthread
+-- Looking for pthread_create in pthread - found
+-- Found Threads: TRUE  
+-- Using Python nosetests: /usr/bin/nosetests-2.7
+-- catkin 0.7.28
+-- BUILD_SHARED_LIBS is on
+-- BUILD_SHARED_LIBS is on
+-- Configuring done
+-- Generating done
+-- Build files have been written to: /home/israa/catkin_ws/build
+####
+#### Running command: "make -j4 -l4" in "/home/israa/catkin_ws/build"
+####
+israa@israa-VirtualBox:~/catkin_ws$ source devel/setup.bash
+israa@israa-VirtualBox:~/catkin_ws$ catkin_create_pkg my_first_pkg std_msgs rospy roscpp sensor_msgs
+Created file my_first_pkg/package.xml
+Created file my_first_pkg/CMakeLists.txt
+Created folder my_first_pkg/include/my_first_pkg
+Created folder my_first_pkg/src
+Successfully created files in /home/israa/catkin_ws/my_first_pkg. Please adjust the values in package.xml.
+israa@israa-VirtualBox:~/catkin_ws$ cd ..
+israa@israa-VirtualBox:~$ ^C
+israa@israa-VirtualBox:~$ cd ~/catkin_ws/src
+israa@israa-VirtualBox:~/catkin_ws/src$ catkin_create_pkg my_first_pkg std_msgs rospy roscpp sensor_msgs
+Created file my_first_pkg/package.xml
+Created file my_first_pkg/CMakeLists.txt
+Created folder my_first_pkg/include/my_first_pkg
+Created folder my_first_pkg/src
+Successfully created files in /home/israa/catkin_ws/src/my_first_pkg. Please adjust the values in package.xml.
+israa@israa-VirtualBox:~/catkin_ws/src$ cd ..
+israa@israa-VirtualBox:~/catkin_ws$ catkin_make
+
+#####task 3 
+followed the .xml file path and added my name and email 
+
+
+####task 4 
+# .py file
+
+$ cd my_first_pkg
+$ mkdir script
+$ cd script
+#python file added under name (task.py) 
+
+$ chmod +x task.py           
+$ rosrun my_first_pkg task.py   
+#prints hello there 
+
+# .cpp file
+
+$ cd my_first_pkg/src
+#.cpp file added under name (task.cpp)
+$ g++ task.cpp -o output    
+$ rosrun my_first_pkg output    
+
+###task5 
+
+israa@israa-VirtualBox:~$ mkdir auc_robo
+israa@israa-VirtualBox:~$ cd auc_robo
+israa@israa-VirtualBox:~/auc_robo$ git clone https://github.com/khaledgabr77/AUC-Robotics-Summer-Camp.git
+Cloning into 'AUC-Robotics-Summer-Camp'...
+remote: Enumerating objects: 1323, done.
+remote: Counting objects: 100% (1323/1323), done.
+remote: Compressing objects: 100% (491/491), done.
+remote: Total 1323 (delta 776), reused 1228 (delta 681), pack-reused 0
+Receiving objects: 100% (1323/1323), 1.68 MiB | 2.37 MiB/s, done.
+Resolving deltas: 100% (776/776), done.
+israa@israa-VirtualBox:~/auc_robo$ cd AUC-Robotics-Summer-Camp/Day3/catkin_ws
+israa@israa-VirtualBox:~/auc_robo/AUC-Robotics-Summer-Camp/Day3/catkin_ws$ rm -r devel
+israa@israa-VirtualBox:~/auc_robo/AUC-Robotics-Summer-Camp/Day3/catkin_ws$ rm -r build
+israa@israa-VirtualBox:~/auc_robo/AUC-Robotics-Summer-Camp/Day3/catkin_ws$ ls
+src
+israa@israa-VirtualBox:~/auc_robo/AUC-Robotics-Summer-Camp/Day3/catkin_ws$ 
+
