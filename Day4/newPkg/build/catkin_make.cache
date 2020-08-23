@@ -1,0 +1,2 @@
+myPkg
+-DCATKIN_DEVEL_PREFIX=/home/israa/ROS/pkgs/newPkg/devel -DCMAKE_INSTALL_PREFIX=/home/israa/ROS/pkgs/newPkg/install -G Unix Makefiles

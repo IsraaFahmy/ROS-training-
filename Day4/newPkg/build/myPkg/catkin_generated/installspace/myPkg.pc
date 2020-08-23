@@ -1,0 +1,8 @@
+prefix=/home/israa/ROS/pkgs/newPkg/install
+
+Name: myPkg
+Description: Description of myPkg
+Version: 0.0.0
+Cflags: -I${prefix}/include
+Libs: -L${prefix}/lib 
+Requires: 
